@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 //import App from './App.tsx'
-import NavbarComponent from './components/home/navbarComponent/NavbarComponent.tsx'
-import BannerComponent from './components/home/bannerComponent/BannerComponent.tsx'
-import IndexContentComponent from './components/home/indexContentComponent/IndexContentComponent.tsx'
+import NavbarComponent from './components/navbarComponent/NavbarComponent.tsx'
+import HomeComponent from './components/home/homeComponent/HomeComponent.tsx'
 //import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <NavbarComponent/>
-    <BannerComponent/>
-    <IndexContentComponent/>
-  </React.StrictMode>,
+  <Router>
+      <NavbarComponent/>
+      <Routes>
+        <Route path="/" element={<HomeComponent/>} />
+      </Routes>
+  </Router>
+  
 )

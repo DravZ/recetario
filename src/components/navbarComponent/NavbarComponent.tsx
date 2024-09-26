@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 function NavbarComponent(){
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -9,7 +11,7 @@ function NavbarComponent(){
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <Link to="/" className='nav-link active'>Home</Link>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="#">Features</a>
