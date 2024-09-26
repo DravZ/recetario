@@ -1,9 +1,10 @@
+import CategoriasComponent from '../../CategoriasComponent/CategoriasComponent'
 import './IndexContentComponent.css'
 
 function IndexContentComponent(){
     //Componente de Armando
     return(
-        <p>Soy Armando y Yo trabajo Aqui</p>
+        <CategoriasComponent categoria="Dylan putito" nombre='Dylan' />
     )
 
 }
