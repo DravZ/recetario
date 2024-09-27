@@ -1,10 +1,15 @@
+import BannerComponent from "../bannerComponent/BannerComponent";
+import MenuComponent from "../menuComponent/MenuComponent";
 import "./HomeComponent.css";
 //import "bootstrap/dist/css/bootstrap.min.css";
 function HomeComponent() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-7">
+        <BannerComponent/>
+        <MenuComponent/>
+        <hr  className="mb-4"/>
+        <div className="col-7 mt-4">
           <img
             className="img-fluid"
             src="https://centrosantafe.com.mx/cdn/shop/articles/Restaurantes_Comida_Internacional.JPG?v=1555022012"
