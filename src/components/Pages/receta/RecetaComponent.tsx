@@ -1,46 +1,48 @@
 import { useEffect, useState } from 'react';
-import './ResetaComponent.css'
-import {getReceta, receta} from '../../../data/postres'
+import './ResetaComponent.css';
+import { getReceta, receta } from '../../../data/postres';
 import { useParams } from 'react-router-dom';
 
 function RecetaComponent() {
+    // Obtener el ID de los parámetros de la URL
     const { id } = useParams<{ id: string }>();
-    const recetaId = Number(id) -1; // Obtener el id de los parámetros
+    const recetaId = Number(id) - 1; 
 
-    const [recetaDetail, setRecetaDetail] = useState<receta | null>(null); // Inicializa el estado
+    // Estado inicial de la receta
+    const [recetaDetail, setRecetaDetail] = useState<receta | null>(null);
 
-    // Llama a la función cuando se monta el componente
+    // Cargar los detalles de la receta al montar el componente
     useEffect(() => {
-        const fetchedReceta = getReceta(recetaId); // Llama a la función y guarda el resultado
-        setRecetaDetail(fetchedReceta); // Actualiza el estado con la receta devuelta
+        const fetchedReceta = getReceta(recetaId);
+        setRecetaDetail(fetchedReceta);
     }, [recetaId]);
 
-    // Manejo de estado en caso de que la receta no se encuentre
+    // Mostrar un mensaje de carga si la receta aún no ha sido obtenida
     if (!recetaDetail) {
         return <div>Cargando...</div>;
     }
 
     return (
-        <div>
-            <h1>{recetaDetail.titulo}</h1>
-            <img src={recetaDetail.imagen} alt={recetaDetail.titulo} />
-            <p>Para {recetaDetail.cuantasPersonas} personas</p>
+        <div className="receta-container">
+            <h1 className="receta-titulo font-bold" > {recetaDetail.titulo}</h1>
+            <img className="receta-imagen" src={recetaDetail.imagen} alt={recetaDetail.titulo} />
+            <p className="receta-porciones">Para {recetaDetail.cuantasPersonas} personas</p>
+            
             <h2>Ingredientes</h2>
-            <ul>
+            <ul className="receta-ingredientes">
                 {recetaDetail.ingredientes.map((ingrediente, index) => (
                     <li key={index}>{ingrediente}</li>
                 ))}
             </ul>
+            
             <h2>Pasos</h2>
-            <ol>
+            <ol className="receta-pasos">
                 {recetaDetail.pasos.map((paso, index) => (
                     <li key={index}>{paso}</li>
                 ))}
             </ol>
         </div>
     );
-};
-
-
+}
 
 export default RecetaComponent;
