@@ -12,7 +12,7 @@ const CategoriasComponent: React.FC<CategoriasComponentProps> = ({ categoria, no
     return (
         <div className='row mt-0 mx-4'>
 
-            <h2>{categoria}</h2>
+            <h2 className='font-bold'>{categoria}</h2>
 
             <CardProductComponent/>
             <CardProductComponent/>
