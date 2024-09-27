@@ -1,12 +1,14 @@
 .square-img {
     width: 100%;
     position: relative;
-    padding-bottom: 100%;
+    padding-bottom: 70%;
     /* Mantiene el contenedor cuadrado */
     overflow: hidden;
 }
 
 .square-img img {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,4 +16,8 @@
     height: 100%;
     object-fit: cover;
     /* Asegura que la imagen cubra todo el espacio sin deformarse */
+}
+
+.card-product{
+    border-radius: 0.5rem;
 }

@@ -7,7 +7,7 @@ function PostresComponent(){
         <div className='conteiner-fluid'>
             <div className='row justify-content-center m-0'>
                 <div className='col-11'>
-                    <CategoriasComponent categoria='Postres' nombre='Dylan'/>
+                    <CategoriasComponent categoria='Postres'/>
                 </div>
             </div>
         </div>
