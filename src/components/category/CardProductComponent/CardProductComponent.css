@@ -21,3 +21,9 @@
 .card-product{
     border-radius: 0.5rem;
 }
+.no-decoration{
+    text-decoration: none;
+}
+.fontclr-black{
+    color: black;
+}

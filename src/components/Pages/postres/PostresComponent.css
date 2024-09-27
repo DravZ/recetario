@@ -1,0 +1,9 @@
+.conteiner-rel{
+    position: relative;
+}
+.container-category{
+    position: absolute;
+    top: 40vh;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
