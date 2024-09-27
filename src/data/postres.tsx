@@ -250,10 +250,6 @@ export const recetas: receta[] = [
     }
 ];
 
-
-
-
-
 interface receta{
     id : number,
     titulo : string,
