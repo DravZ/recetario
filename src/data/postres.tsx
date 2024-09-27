@@ -1,3 +1,13 @@
+export interface receta{
+    id : number,
+    titulo : string,
+    imagen : string,
+    cuantasPersonas: number,
+    utensilios: string[],
+    ingredientes: string[],
+    pasos: string[]
+}
+
 export const recetas: receta[] = [
     {
         id: 1,
@@ -250,12 +260,6 @@ export const recetas: receta[] = [
     }
 ];
 
-interface receta{
-    id : number,
-    titulo : string,
-    imagen : string,
-    cuantasPersonas: number,
-    utensilios: string[],
-    ingredientes: string[],
-    pasos: string[]
-}
+export const getReceta = (id : number) => {
+    return recetas[id]
+};

@@ -1,5 +1,5 @@
 import "./HomeComponent.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 function HomeComponent() {
   return (
     <div className="container-fluid">
