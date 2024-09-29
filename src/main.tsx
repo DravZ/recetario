@@ -6,9 +6,11 @@ import NavbarComponent from './components/navbarComponent/NavbarComponent.tsx'
 import HomeComponent from './components/home/homeComponent/HomeComponent.tsx'
 import PostresComponent from './components/Pages/postres/PostresComponent.tsx';
 import RecetaComponent from './components/Pages/receta/RecetaComponent.tsx';
+import FooterComponent from './components/footerComponent/footerComponent.tsx';
 //import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
+  <>
   <Router>
       <NavbarComponent/>
       <Routes>
@@ -16,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/postres" element={<PostresComponent/>} />
         <Route path="/receta/:id" element={<RecetaComponent/>} />
       </Routes>
+      <FooterComponent/>
   </Router>
-  
+  </>
 )

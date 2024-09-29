@@ -1,9 +1,20 @@
-.conteiner-rel{
+.container-grid {
+    display: grid;
     position: relative;
 }
-.container-category{
-    position: absolute;
-    top: 40vh;
-    background-color: #f6f3f3;
+
+.container-grid img {
+    width: 100%;
+    height: auto;
+    grid-area: 1 / 1 / 2 / 2; /* Posiciona la imagen en la primera "capa" de la cuadrícula */
+}
+
+.overlay {
+    margin-top: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 2; /* Posiciona el overlay en la misma área de la imagen */
+    padding: 20px;
     border-radius: 0.5rem;
 }
