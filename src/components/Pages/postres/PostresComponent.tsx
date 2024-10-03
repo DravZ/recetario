@@ -6,7 +6,7 @@ function PostresComponent(){
         <div className="container-grid">
             <img src="../../../../public/img/Categorias/postres/banner_pastel_choco.jpg" alt="Postres" />
             <div className="overlay">
-                <div className='row mb-4'>
+                <div className='row mb-4 d-flex justify-content-center'>
                     <div className='col-11'>
                         <CategoriasComponent categoria="Postres" />
                     </div>

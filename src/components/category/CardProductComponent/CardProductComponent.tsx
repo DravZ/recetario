@@ -14,7 +14,7 @@ const CardProductComponent: React.FC<CardProps> = ({id, img, title}) =>{
             <div className="card col-12 my-2 card-product">
                 <Link className='no-decoration fontclr-black' to={'/receta/'+ (id)}>
                     <div className="square-img">
-                        <img src={img} alt="Imagen de ejemplo"/>
+                        <img src={img} alt="Imagen de ejemplo" className='sqr-img'/>
                     </div>
                     <div className="card-body">
                         <h4 className="card-title font-bold text-center">{title}</h4>
