@@ -1,5 +1,6 @@
 export interface receta{
     id : number,
+    categoria : string
     titulo : string,
     imagen : string,
     cuantasPersonas: number,
@@ -11,6 +12,7 @@ export interface receta{
 export const recetas: receta[] = [
     {
         id: 1,
+        categoria: "Postres",
         titulo: "Flan Napolitano",
         imagen: "../../public/img/Categorias/postres/img_recetas/flan.jpg",
         cuantasPersonas: 6,
@@ -35,6 +37,7 @@ export const recetas: receta[] = [
     },
     {
         id: 2,
+        categoria: "Postres",
         titulo: "Pastel de Tres Leches",
         imagen: "../../public/img/Categorias/postres/img_recetas/206-pastel-de-tres-leches.jpg",
         cuantasPersonas: 8,
@@ -62,6 +65,7 @@ export const recetas: receta[] = [
     },
     {
         id: 3,
+        categoria: "Postres",
         titulo: "Galletas de Chocolate",
         imagen: "../../public/img/Categorias/postres/img_recetas/galletas-chocolate.jpg",
         cuantasPersonas: 12,
@@ -91,6 +95,7 @@ export const recetas: receta[] = [
     },
     {
         id: 4,
+        categoria: "Postres",
         titulo: "Chocotorta",
         imagen: "../../public/img/Categorias/postres/img_recetas/Chocotorta.jpg",
         cuantasPersonas: 8,
@@ -114,6 +119,7 @@ export const recetas: receta[] = [
     },
     {
         id: 5,
+        categoria: "Postres",
         titulo: "Mousse de Chocolate",
         imagen: "../../public/img/Categorias/postres/img_recetas/mousse-choco.jpg",
         cuantasPersonas: 4,
@@ -138,6 +144,7 @@ export const recetas: receta[] = [
     },
     {
         id: 6,
+        categoria: "Postres",
         titulo: "Tarta de Limón",
         imagen: "../../public/img/Categorias/postres/img_recetas/tarta-de-limon-en-el-plato.jpg",
         cuantasPersonas: 8,
@@ -162,6 +169,7 @@ export const recetas: receta[] = [
     },
     {
         id: 7,
+        categoria: "Postres",
         titulo: "Panna Cotta",
         imagen: "../../public/img/Categorias/postres/img_recetas/panna-cotta.jpg",
         cuantasPersonas: 4,
@@ -186,6 +194,7 @@ export const recetas: receta[] = [
     },
     {
         id: 8,
+        categoria: "Postres",
         titulo: "Brownies de Chocolate",
         imagen: "../../public/img/Categorias/postres/img_recetas/brownie-de-chocolate-receta.jpg",
         cuantasPersonas: 6,
@@ -213,6 +222,7 @@ export const recetas: receta[] = [
     },
     {
         id: 9,
+        categoria: "Postres",
         titulo: "Helado Casero de Vainilla",
         imagen: "../../public/img/Categorias/postres/img_recetas/helado-vainilla.jpg",
         cuantasPersonas: 4,
@@ -234,6 +244,7 @@ export const recetas: receta[] = [
     },
     {
         id: 10,
+        categoria: "Postres",
         titulo: "Tiramisu",
         imagen: "../../public/img/Categorias/postres/img_recetas/tiramisu.jpg",
         cuantasPersonas: 6,

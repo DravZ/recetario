@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './ResetaComponent.css';
-import { getReceta, receta } from '../../../data/postres';
+import { getReceta, receta } from '../../../data/recetas';
 import { useParams } from 'react-router-dom';
 
 function RecetaComponent() {

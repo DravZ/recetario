@@ -14,28 +14,28 @@ function MenuComponent(){
                             </Link>
                         </div>
                         <div className='col-2 mb-4 pb-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
-                            <Link to="/postres" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria=''/>
+                            <Link to="/ensaladas" className='link-cont-men d-flex justify-content-center align-items-center'>
+                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Ensaladas'/>
                             </Link>
                         </div>
                         <div className='col-2 mt-4 pt-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
-                            <Link to="/postres" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria=''/>
+                            <Link to="/pastas" className='link-cont-men d-flex justify-content-center align-items-center'>
+                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Pastas'/>
                             </Link>
                         </div>
                         <div className='col-2 mb-4 pb-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
-                            <Link to="/postres" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria=''/>
+                            <Link to="/desayunos" className='link-cont-men d-flex justify-content-center align-items-center'>
+                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Desayunos'/>
                             </Link>
                         </div>
                         <div className='col-2 mt-4 pt-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
-                            <Link to="/postres" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria=''/>
+                            <Link to="/ninos" className='link-cont-men d-flex justify-content-center align-items-center'>
+                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Niños'/>
                             </Link>
                         </div>
                         <div className='col-2 mb-4 pb-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
-                            <Link to="/postres" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria=''/>
+                            <Link to="/dylan" className='link-cont-men d-flex justify-content-center align-items-center'>
+                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='El Joto'/>
                             </Link>
                         </div>
                         
