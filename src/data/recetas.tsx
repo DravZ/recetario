@@ -803,6 +803,62 @@ export const recetas: receta[] = [
       "Refrigera por al menos 2 horas antes de servir.",
     ],
   },
+  {
+    id: 32,
+    categoria: "Jotito",
+    titulo: "Joto de nacimiento",
+    imagen: "../../public/img/Categorias/easterEgg/dylan1.jpeg",
+    cuantasPersonas: 4,
+    utensilios: ["Molde", "licuadora", "espátula", "cuchillo"],
+    ingredientes: [
+      "1 paquete de galletas María trituradas"
+    ],
+    pasos: [
+      "Mezcla las galletas trituradas con la mantequilla y presiona la mezcla en un molde para formar la base."
+    ]
+  },
+  {
+    id: 33,
+    categoria: "Jotito",
+    titulo: "Soy la reina >_0",
+    imagen: "../../public/img/Categorias/easterEgg/dylan2.jpg",
+    cuantasPersonas: 4,
+    utensilios: ["Molde", "licuadora", "espátula", "cuchillo"],
+    ingredientes: [
+      "1 paquete de galletas María trituradas"
+    ],
+    pasos: [
+      "Mezcla las galletas trituradas con la mantequilla y presiona la mezcla en un molde para formar la base."
+    ]
+  },
+  {
+    id: 34,
+    categoria: "Jotito",
+    titulo: "Cuiden a sus hombres",
+    imagen: "../../public/img/Categorias/easterEgg/dylan3.jpg",
+    cuantasPersonas: 4,
+    utensilios: ["Molde", "licuadora", "espátula", "cuchillo"],
+    ingredientes: [
+      "1 paquete de galletas María trituradas"
+    ],
+    pasos: [
+      "Mezcla las galletas trituradas con la mantequilla y presiona la mezcla en un molde para formar la base."
+    ]
+  },
+  {
+    id: 35,
+    categoria: "Jotito",
+    titulo: "Orgullosamente putito",
+    imagen: "../../public/img/Categorias/easterEgg/dylan 4.jpg",
+    cuantasPersonas: 4,
+    utensilios: ["Molde", "licuadora", "espátula", "cuchillo"],
+    ingredientes: [
+      "1 paquete de galletas María trituradas"
+    ],
+    pasos: [
+      "Mezcla las galletas trituradas con la mantequilla y presiona la mezcla en un molde para formar la base."
+    ]
+  }
 ];
 
 export const getReceta = (id: number) => {
