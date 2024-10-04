@@ -15,27 +15,27 @@ function MenuComponent(){
                         </div>
                         <div className='col-2 mb-4 pb-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
                             <Link to="/ensaladas" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Ensaladas'/>
+                                <ItemMenuComponent img='../../../../public/img/Categorias/ensaladas/ensalada-quesos.jpg' categoria='Ensaladas'/>
                             </Link>
                         </div>
                         <div className='col-2 mt-4 pt-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
                             <Link to="/pastas" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Pastas'/>
+                                <ItemMenuComponent img='../../../../public/img/Categorias/pastas/pasta-lasana.jpg' categoria='Pastas'/>
                             </Link>
                         </div>
                         <div className='col-2 mb-4 pb-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
                             <Link to="/desayunos" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Desayunos'/>
+                                <ItemMenuComponent img='../../../../public/img/Categorias/desayunos/desayuno-panTiramisu.jpg' categoria='Desayunos'/>
                             </Link>
                         </div>
                         <div className='col-2 mt-4 pt-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
                             <Link to="/ninos" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Niños'/>
+                                <ItemMenuComponent img='../../../../public/img/Categorias/ninos/nino-tiraPollo.jpg' categoria='Niños'/>
                             </Link>
                         </div>
                         <div className='col-2 mb-4 pb-4 px-0 d-flex justify-content-center align-items-center' style={{ height: '70vh' }}>
                             <Link to="/dylan" className='link-cont-men d-flex justify-content-center align-items-center'>
-                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='El Joto'/>
+                                <ItemMenuComponent img='../../../../public/EasterEgg.jpg' categoria='Dylan'/>
                             </Link>
                         </div>
                         

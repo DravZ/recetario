@@ -10,10 +10,10 @@ interface CategoriasComponentProps {
 
 const CategoriasComponent: React.FC<CategoriasComponentProps> = ({ categoria}) => {
     return (
-        <div className='row mt-0 mx-4 mt-4 d-flex justify-content-center cont-cat'>
-            <div className='col-11'>
-                <h1 className='font-bold mt-4 mb-4'>{categoria}</h1>
-                <div className='row mt-0'>
+        <div className='row mt-0 mx-0 mt-4 d-flex justify-content-center cont-cat'>
+            <div className='col-11 m-0 p-0'>
+                <h1 className='font-bold mt-4 mb-4 mx-0'>{categoria}</h1>
+                <div className='row mt-0 mx-0'>
                     {recetas.map((receta, index) => (
                         receta.categoria === categoria && (
                             <CardProductComponent

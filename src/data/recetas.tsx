@@ -391,7 +391,7 @@ export const recetas: receta[] = [
   {
     id: 16,
     categoria: "Pastas",
-    titulo: "Lasaña",
+    titulo: "Lasaña de queso",
     imagen: "../../public/img/Categorias/pastas/pasta-lasana.jpg",
     cuantasPersonas: 6,
     utensilios: [
@@ -429,7 +429,7 @@ export const recetas: receta[] = [
   {
     id: 17,
     categoria: "Pastas",
-    titulo: "Fetuccine",
+    titulo: "Fetuccine a la Francesa",
     imagen: "../../public/img/Categorias/pastas/pasta-fetuccine.jpg",
     cuantasPersonas: 4,
     utensilios: [
@@ -461,7 +461,7 @@ export const recetas: receta[] = [
   {
     id: 18,
     categoria: "Pastas",
-    titulo: "Raviolis",
+    titulo: "Raviolis a la Italiana",
     imagen: "../../public/img/Categorias/pastas/pasta-ravioles.jpg",
     cuantasPersonas: 2,
     utensilios: ["Olla mediana", "sartén pequeña", "cuchara", "colador"],
