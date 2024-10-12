@@ -1,0 +1,35 @@
+.imagenDos {
+  width: 100%;
+  height: 100%;
+}
+.img_index{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 0.2rem;
+}
+.ojo{
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50%;
+}
+.div_text_1{
+  height: 100%;
+  background-color: white;
+  border-bottom-left-radius: 0.5rem;
+}
+.div_text{
+  height: 100%;
+  background-color: white;
+  
+}
+.div_text_2{
+  height: 100%;
+  background-color: white;
+  border-top-right-radius: 0.5rem;
+}
+.fontsz_text{
+  font-size: 18px;
+}

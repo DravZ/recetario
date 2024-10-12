@@ -1,0 +1,40 @@
+.receta_container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fbf8f1;
+    border-radius: 10px;
+}
+
+.receta_titulo {
+    font-size: 2em;
+    color: #47403b;
+    text-align: center;
+}
+
+.receta_imagen {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.receta_porciones {
+    font-size: 1.2em;
+    text-align: center;
+    color: #777;
+}
+
+.receta_ingredientes, .receta_pasos {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.receta_ingredientes li, .receta_pasos li {
+    background: #ffffff;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}

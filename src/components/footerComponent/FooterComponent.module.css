@@ -1,0 +1,33 @@
+.footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.centered_line_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191616; /* Fondo oscuro para ver las líneas blancas */
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.line {
+  flex: 1;
+  height: 2px; /* Ajusta la altura de la línea */
+  background-color: white; /* Ajusta el color de la línea */
+  margin: 0 10px; /* Ajusta el espacio entre la palabra y las líneas */
+}
+
+.centered_word {
+  color: white; /* Ajusta el color de la palabra */
+  padding: 0 10px; /* Ajusta el espacio alrededor de la palabra */
+  background-color: #191616; /* Ajusta el color de fondo si es necesario */
+}
+.cont_foot{
+  background-color: #191616;
+}
+.font_clr_white{
+  color: white !important;
+}
