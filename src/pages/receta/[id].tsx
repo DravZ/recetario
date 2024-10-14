@@ -2,6 +2,8 @@ import NavbarComponent from '@/components/navbarComponent/NavbarComponent';
 import RecetaComponent from '../../components/Pages/receta/RecetaComponent';
 import { getReceta, receta } from '../../data/recetas';
 import FooterComponent from '@/components/footerComponent/FooterComponent';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 // Función para obtener los datos de la receta según el ID
 export async function getServerSideProps(context: { params: { id: string } }) {
@@ -26,6 +28,16 @@ export async function getServerSideProps(context: { params: { id: string } }) {
 
 // Componente de página que renderiza RecetaComponent
 const RecetaPage = ({ recetaDetail }) => {
+    const router = useRouter();
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const user = localStorage.getItem('user');
+            if (!user) {
+                router.push('/');
+            }
+        }
+    }, [router]); // Ejecutar cuando el componente esté montado y cuando el router esté disponible
     return (
         <>
             <NavbarComponent/>

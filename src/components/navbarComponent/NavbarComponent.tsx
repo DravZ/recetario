@@ -3,9 +3,26 @@ import Link from 'next/link'; // Importar Link de Next.js
 import { useRouter } from 'next/router'; // Importar useRouter
 import styles from './NavbarComponent.module.css'; // Importar como CSS Module
 
+import { useEffect, useState } from 'react';
+
 
 function NavbarComponent() {
+  const [token, setToken] = useState<string | null>(null);
   const router = useRouter(); // Obtener el enrutador
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedToken = localStorage.getItem('user');
+      setToken(storedToken);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    setToken(null);
+    router.push('/login'); // Redirigir al usuario a la página de login
+  };
+
 
   return (
     <>
@@ -75,6 +92,33 @@ function NavbarComponent() {
                   Dylan
                 </Link>
               </li>
+              {!token ? (
+                <>
+                  <li className="nav-item" style={{ marginRight: '20px' }}>
+                    <Link 
+                      href="/register" 
+                      className={`nav-link ${router.pathname === '/register' ? 'active' : ''}`} 
+                      style={{ color: router.pathname === '/register' ? '#f0c040' : 'white' }}> 
+                      Registrarme
+                    </Link>
+                  </li>
+                  <li className="nav-item" style={{ marginRight: '20px' }}>
+                    <Link 
+                      href="/login" 
+                      className={`nav-link ${router.pathname === '/login' ? 'active' : ''}`} 
+                      style={{ color: router.pathname === '/login' ? '#f0c040' : 'white' }}> {/* Color amarillo para la página activa */}
+                      Iniciar Sesion
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                // Si hay token, mostrar el botón para cerrar sesión
+                <li className="nav-item" style={{ marginRight: '20px' }}>
+                  <button className="nav-link" onClick={handleLogout} style={{ color: 'white' }}>
+                    Cerrar sesión
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         </div>

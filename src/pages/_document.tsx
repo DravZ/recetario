@@ -6,9 +6,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta charSet="UTF-8" />
-                    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-                    <link rel="stylesheet" href="index.css"/>
+                    
             
                     {/*<!--Bootstrao CSS--> */}
                     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
