@@ -1,10 +1,8 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import NavbarComponent from '@/components/navbarComponent/NavbarComponent';
 import FooterComponent from '@/components/footerComponent/FooterComponent';
-
-import { useEffect } from 'react';
-
+import NavbarComponent from '@/components/navbarComponent/NavbarComponent';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import styles from '../styles/login.module.css';
 
 const Login = () => {
     const [correo, setCorreo] = useState('');
@@ -19,83 +17,67 @@ const Login = () => {
                 router.push('/');
             }
         }
-    }, [router]); // Ejecutar cuando el componente esté montado y cuando el router esté disponible
+    }, [router]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        try {
-            console.log("Login clic");
-            const res = await fetch('/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ correo, contrasena }),
-            });
+        const res = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ correo, contrasena }),
+        });
+        const data = await res.json();
+        const statusCode = res.status;
+        setMensaje(data.message);
 
-            
-            if (!res.ok) {
-                throw new Error('Error en la solicitud de login');
-            }
-            // Aquí puedes atrapar el status y hacer acciones diferentes según el código
-            const statusCode = res.status;
-            console.log('Código de estado:', statusCode);
-
-            if (statusCode === 200) {
-                const data = await res.json();
-
-                const user = data.user;
-                setMensaje(data.message);
-                // Redirige o ejecuta alguna acción en caso de éxito
-                console.log('Login exitoso');
-
-                localStorage.setItem('user', JSON.stringify(user)); // Almacena los datos del usuario como un string JSON
-                router.push('/'); // Redirigir al usuario a la página de login
-
-            } else if (statusCode === 401) {
-                setMensaje('Correo o contraseña incorrectos');
-                console.log('Error de autenticación');
-            } else if (statusCode === 500) {
-                setMensaje('Error en el servidor');
-                console.log('Error en el servidor');
-            } else {
-                setMensaje('Error desconocido');
-                console.log('Ocurrió un error');
-            }
-        } catch (error) {
-            console.error('Error:', error);
+        if (statusCode === 200) {
+            localStorage.setItem('user', JSON.stringify(data.user)); // Guarda la sesión del usuario
+            router.push('/'); // Redirigir a la página principal si el login es exitoso
         }
     };
-    
+
     return (
         <>
-            <NavbarComponent/>
-            <div>
-                <h1>Iniciar Sesión</h1>
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>Correo:</label>
-                        <input
-                            type="text"
-                            value={correo}
-                            onChange={(e) => setCorreo(e.target.value)}
-                            required
-                        />
+            <NavbarComponent />
+            <div className={styles.loginContainer}>
+                <div className={styles.imageSection}></div>
+                <div className={styles.formSection}>
+                    <div className={styles.card}>
+                        <h1 className={styles.welcomeText}>Inicio de Sesión</h1>
+                        <form onSubmit={handleSubmit} className={styles.form}>
+                            <div className={styles.inputContainer}>
+                                <label className={styles.inputLabel}>Email:</label>
+                                <input
+                                    type="email"
+                                    className={styles.inputField}
+                                    value={correo}
+                                    onChange={(e) => setCorreo(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className={styles.inputContainer}>
+                                <label className={styles.inputLabel}>Contraseña:</label>
+                                <input
+                                    type="password"
+                                    className={styles.inputField}
+                                    value={contrasena}
+                                    onChange={(e) => setContrasena(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className={styles.buttonContainer}>
+                                <button type="submit" className={styles.loginButton}>
+                                    Iniciar Sesión
+                                </button>
+                            </div>
+                        </form>
+                        {mensaje && <p className={styles.message}>{mensaje}</p>}
                     </div>
-                    <div>
-                        <label>Contraseña:</label>
-                        <input
-                            type="password"
-                            value={contrasena}
-                            onChange={(e) => setContrasena(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <button type="submit">Iniciar Sesión</button>
-                </form>
-                {mensaje && <p>{mensaje}</p>}
+                </div>
             </div>
-            <FooterComponent/>
+            <FooterComponent />
         </>
     );
 };
