@@ -33,3 +33,9 @@
 .fontsz_text{
   font-size: 18px;
 }
+
+
+.img_lg{
+  width: 90%;
+  border-radius: 0.3rem;
+}
