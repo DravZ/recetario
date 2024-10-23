@@ -9,6 +9,7 @@ const Register = () => {
     const [correo, setCorreo] = useState('');
     const [contrasena, setContrasena] = useState('');
     const [mensaje, setMensaje] = useState('');
+    const [mensaje2, setMensaje2] = useState('');
     const router = useRouter();
 
     useEffect(() => {
@@ -31,10 +32,14 @@ const Register = () => {
         });
         const data = await res.json();
         const statusCode = res.status;
-        setMensaje(data.message);
 
         if (statusCode === 201) {
-            router.push('/login'); // Redirigir al login si es exitoso
+            setTimeout(() => {
+                router.push('/login'); // Redirigir a la página principal si el login es exitoso
+            }, 2000)
+            setMensaje2(data.message);
+        }else{
+            setMensaje(data.message);
         }
     };
 
@@ -84,6 +89,7 @@ const Register = () => {
                             </div>
                         </form>
                         {mensaje && <p className={styles.message}>{mensaje}</p>}
+                        {mensaje2 && <p className={styles.message2}>{mensaje2}</p>}
                     </div>
                 </div>
             </div>

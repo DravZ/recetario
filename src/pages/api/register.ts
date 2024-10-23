@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(201).json({ message: 'Usuario registrado exitosamente', user: newUser });
     } catch (error) {
         console.error('Error al registrar el usuario:', error); // Esto te dará más información en la consola
-        return res.status(500).json({ message: 'Error en el servidor', error });
+        return res.status(500).json({ message: 'El correo ya se encuentra en uso', error });
       
     }
   } else {

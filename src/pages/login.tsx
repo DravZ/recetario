@@ -8,6 +8,7 @@ const Login = () => {
     const [correo, setCorreo] = useState('');
     const [contrasena, setContrasena] = useState('');
     const [mensaje, setMensaje] = useState('');
+    const [mensaje2, setMensaje2] = useState('');
     const router = useRouter();
 
     useEffect(() => {
@@ -28,13 +29,19 @@ const Login = () => {
             },
             body: JSON.stringify({ correo, contrasena }),
         });
-        const data = await res.json();
         const statusCode = res.status;
-        setMensaje(data.message);
-
+        
         if (statusCode === 200) {
+            const data = await res.json();
             localStorage.setItem('user', JSON.stringify(data.user)); // Guarda la sesión del usuario
-            router.push('/'); // Redirigir a la página principal si el login es exitoso
+            setMensaje2(data.message);
+            
+            setTimeout(() => {
+                router.push('/'); // Redirigir a la página principal si el login es exitoso
+            }, 2000)
+        }else{
+            const data = await res.json();
+            setMensaje(data.message);
         }
     };
 
@@ -74,6 +81,7 @@ const Login = () => {
                             </div>
                         </form>
                         {mensaje && <p className={styles.message}>{mensaje}</p>}
+                        {mensaje2 && <p className={styles.message2}>{mensaje2}</p>}
                     </div>
                 </div>
             </div>
